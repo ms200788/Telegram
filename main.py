@@ -261,16 +261,33 @@ p {{
 </style>
 
 <script>
-let t = 20;
-let timer = setInterval(() => {{
-    document.getElementById("t").innerText = t;
-    if (t <= 0) {{
-        clearInterval(timer);
-        document.getElementById("continueBox").style.display = "block";
-        document.getElementById("timerText").innerText = "You can continue now";
-    }}
-    t--;
-}}, 1000);
+let t = 20; // timer in seconds
+let timerInterval;
+
+// Function to update timer
+function startTimer() {
+    timerInterval = setInterval(() => {
+        document.getElementById("t").innerText = t;
+        if (t <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById("msg").innerText = "Scroll down and click Continue";
+            document.getElementById("c").style.display = "block"; // show continue button
+        }
+        t--;
+    }, 1000);
+}
+
+// Start timer initially
+startTimer();
+
+// Pause/resume timer based on page visibility
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+        clearInterval(timerInterval); // pause timer
+    } else {
+        startTimer(); // resume timer
+    }
+});
 </script>
 </head>
 
