@@ -213,229 +213,263 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
 
     return f"""
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Artificial Intelligence – A Complete Guide</title>
+<title>Special Report | Artificial Intelligence</title>
 
 <style>
-body {{
-    background:#0f2027;
-    color:#eaeaea;
-    font-family:system-ui;
+body {
     margin:0;
-}}
-.card {{
-    background:#ffffff;
-    color:#000000;
+    background:#e9ecef;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* HEADER */
+.topbar {
+    background:#b30000;
+    color:#fff;
+    padding:12px 16px;
+    font-size:20px;
+    font-weight:700;
+}
+
+/* SATIRE LABEL */
+.satire {
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:8px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* MAIN CARD */
+.article {
+    max-width:860px;
+    margin:16px auto;
+    background:#fff;
     border-radius:16px;
     padding:20px;
-    margin:16px;
-}}
-h1,h2,h3 {{
-    color:#1c1c1c; /* dark headings */
-}}
-p {{
-    line-height:1.8;
-    margin:14px 0;
+}
+
+/* HEADLINE */
+h1 {
+    font-size:28px;
+    line-height:1.3;
+    margin-bottom:10px;
+    color:#111;
+}
+
+.meta {
+    color:#666;
+    font-size:13px;
+    margin-bottom:16px;
+}
+
+/* PROFILE */
+.profile {
+    display:flex;
+    gap:16px;
+    background:#f4f6f8;
+    padding:14px;
+    border-radius:14px;
+    margin:18px 0;
+}
+
+.profile img {
+    width:96px;
+    height:96px;
+    border-radius:12px;
+    object-fit:cover;
+    border:2px solid #ddd;
+}
+
+.profile-details h3 {
+    margin:0 0 6px 0;
+    font-size:18px;
+}
+
+.profile-details p {
+    margin:4px 0;
+    font-size:14px;
+    color:#333;
+}
+
+/* ARTICLE TEXT */
+p {
     font-size:15px;
-}}
-.btn {{
-    background:#ff4b2b;
+    line-height:1.8;
+    color:#222;
+    margin:14px 0;
+}
+
+/* ADS */
+.ad {
+    margin:24px 0;
+    text-align:center;
+}
+
+/* TIMER */
+.timer {
+    background:#fff3cd;
+    padding:12px;
+    border-radius:12px;
+    text-align:center;
+    font-size:15px;
+    margin:20px 0;
+}
+
+/* CONTINUE */
+.btn {
+    width:100%;
+    background:#e63946;
     color:#fff;
     border:none;
     padding:14px;
-    width:100%;
+    font-size:16px;
     border-radius:30px;
-    font-size:16px;
-}}
-.timer {{
-    text-align:center;
-    font-size:16px;
-    margin:20px 0;
-}}
-.ad {{
-    margin:24px 0;
-    text-align:center;
-}}
+    cursor:pointer;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+    background:#111;
+    color:#fff;
+    padding:16px;
+    font-size:13px;
+    border-radius:12px;
+    margin-top:30px;
+}
 </style>
 
 <script>
-let t = 20; // timer in seconds
-let timerInterval;
+let t = 20;
+let interval;
 
-function startTimer() {{
-    timerInterval = setInterval(() => {{
+function startTimer() {
+    interval = setInterval(() => {
         document.getElementById("t").innerText = t;
-        if (t <= 0) {{
-            clearInterval(timerInterval);
-            document.getElementById("msg").innerText = "Scroll down and click Continue";
-            document.getElementById("c").style.display = "block"; // show continue button
-        }}
+        if (t <= 0) {
+            clearInterval(interval);
+            document.getElementById("msg").innerText = "You may now continue";
+            document.getElementById("continue").style.display = "block";
+        }
         t--;
-    }}, 1000);
-}}
+    }, 1000);
+}
 
 startTimer();
 
-document.addEventListener("visibilitychange", function() {{
-    if (document.hidden) {{
-        clearInterval(timerInterval);
-    }} else {{
-        startTimer();
-    }}
-}});
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) clearInterval(interval);
+    else startTimer();
+});
 </script>
 </head>
 
 <body>
 
-<div class="card">
+<div class="topbar">NEWS REPORT</div>
+<div class="satire">⚠️ THIS ARTICLE IS FICTIONAL & FOR DEMONSTRATION PURPOSES ONLY</div>
 
-<h1>Artificial Intelligence: A Deep and Practical Exploration</h1>
+<div class="article">
 
-<!-- ================= SOCIAL BAR (VIDEO / JS) ================= -->
+<h1>Artificial Intelligence: How Modern Systems Are Reshaping the Digital World</h1>
+
+<div class="meta">
+By Editorial Desk | Updated Today
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+    <img src="https://via.placeholder.com/300x300.png?text=Profile" alt="Profile Photo">
+    <div class="profile-details">
+        <h3>Rohan Verma</h3>
+        <p><b>Age:</b> 24</p>
+        <p><b>Location:</b> India</p>
+        <p><b>Field:</b> Computer Science</p>
+        <p><b>Status:</b> Fictional Profile</p>
+    </div>
+</div>
+
+<!-- AD -->
 <div class="ad">
 <script src="https://pl28574839.effectivegatecpm.com/6f/6f/f2/6f6ff25ccc5d4bbef9cdeafa839743bb.js"></script>
 </div>
 
 <div class="timer">
-<p id="msg">Please wait <b id="t">20</b> seconds while content loads</p>
+<p id="msg">Please wait <b id="t">20</b> seconds to continue reading</p>
 </div>
 
 <p>
-Artificial Intelligence (AI) is no longer a distant or futuristic concept. It is a powerful and rapidly
-evolving technology that already influences nearly every aspect of modern life. From the way we
-communicate and work to how we learn, shop, travel, and make decisions, AI operates quietly in the
-background, shaping experiences in ways many people do not even realize.
+Artificial Intelligence has rapidly evolved from a theoretical concept into a core pillar of modern
+technology. Today, AI systems are embedded in smartphones, recommendation engines, navigation systems,
+and enterprise tools used by millions of people daily.
 </p>
 
 <p>
-At its simplest level, artificial intelligence refers to the ability of machines to perform tasks that
-normally require human intelligence. These tasks include learning from experience, understanding
-language, recognizing images, solving problems, and making predictions. Unlike traditional software,
-AI systems improve over time by analyzing data and adapting their behavior.
+Experts suggest that AI’s ability to learn from data, recognize patterns, and automate decision-making
+has transformed industries such as healthcare, finance, education, and cybersecurity.
 </p>
 
-<h2>The Evolution of Artificial Intelligence</h2>
+<h2>How AI Systems Operate</h2>
 
 <p>
-The journey of AI began in the mid-20th century when scientists first questioned whether machines could
-think. Early AI systems were rule-based and limited in scope. They followed strict instructions written
-by humans and could not adapt beyond those rules. While impressive for their time, these systems lacked
-true intelligence.
+Modern AI relies on machine learning and neural networks trained on massive datasets. These systems do
+not follow rigid instructions; instead, they adapt based on outcomes and feedback.
 </p>
 
-<p>
-The modern era of AI emerged with the rise of machine learning and deep learning. These approaches
-enabled computers to learn directly from large datasets rather than relying solely on predefined logic.
-This shift dramatically improved performance in areas such as speech recognition, image analysis, and
-natural language processing.
-</p>
-
-<!-- ================= MID NATIVE BANNER ================= -->
+<!-- MID AD -->
 <div class="ad">
-<script async="async" data-cfasync="false" src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
+<script async data-cfasync="false" src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
 <div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
 </div>
 
-<h2>How AI Works in the Real World</h2>
-
 <p>
-Modern AI systems rely on data, algorithms, and computing power. Machine learning models are trained on
-large volumes of information, allowing them to identify patterns and make predictions. The better the
-data quality, the more accurate the AI system becomes.
+As AI adoption increases, discussions around ethical use, transparency, and accountability have become
+central to global policy debates.
 </p>
 
-<p>
-Deep learning uses neural networks inspired by the human brain. These networks consist of layers of
-connected nodes that process information step by step. This structure enables AI to perform complex
-tasks such as understanding spoken language, translating text, and detecting objects in images.
-</p>
-
-<h2>Applications of Artificial Intelligence</h2>
+<h2>Looking Ahead</h2>
 
 <p>
-AI applications span nearly every industry. In healthcare, AI assists in disease detection, medical
-imaging, and personalized treatment planning. In finance, it is used for fraud detection, risk
-management, and automated trading. In education, AI enables personalized learning experiences and
-intelligent tutoring systems.
+Industry analysts believe AI will continue to redefine how humans interact with technology. Responsible
+innovation and informed usage will be key to ensuring its benefits are shared broadly.
 </p>
 
-<p>
-AI is also deeply integrated into everyday tools such as smartphones, search engines, navigation apps,
-and social media platforms. These systems rely on AI to recommend content, predict user behavior, and
-optimize performance.
-</p>
-
-<!-- ================= MID BANNER 300x250 ================= -->
+<!-- END AD -->
 <div class="ad">
 <script>
-  atOptions = {{
-    'key' : 'a3a53ccd363dfab580fb6f222586ae7b',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {{}}
-  }};
-</script>
-<script src="https://www.highperformanceformat.com/a3a53ccd363dfab580fb6f222586ae7b/invoke.js"></script>
-</div>
-
-<h2>Ethical and Social Considerations</h2>
-
-<p>
-Despite its benefits, AI presents ethical challenges. Concerns include data privacy, algorithmic bias,
-job displacement, and the misuse of autonomous systems. Responsible AI development requires transparency,
-fairness, and accountability.
-</p>
-
-<p>
-Governments, organizations, and researchers worldwide are working to establish ethical guidelines that
-ensure AI is developed and deployed in ways that benefit society as a whole.
-</p>
-
-<h2>The Future of Artificial Intelligence</h2>
-
-<p>
-The future of AI holds immense potential. As technology continues to advance, AI will play a central
-role in addressing global challenges such as climate change, healthcare access, and sustainable
-development. Human-AI collaboration will likely become the norm rather than the exception.
-</p>
-
-<p>
-Understanding artificial intelligence is essential for navigating the modern world. By learning how AI
-works and how it affects society, individuals can make informed decisions and adapt to an increasingly
-intelligent digital environment.
-</p>
-
-<!-- ================= END BANNER 320x50 ================= -->
-<div class="ad">
-<script>
-  atOptions = {{
+  atOptions = {
     'key' : '32b56ec2e176097bcb57ac54cb139aa2',
     'format' : 'iframe',
     'height' : 50,
     'width' : 320,
-    'params' : {{}}
-  }};
+    'params' : {}
+  };
 </script>
 <script src="https://www.highperformanceformat.com/32b56ec2e176097bcb57ac54cb139aa2/invoke.js"></script>
 </div>
 
-<!-- ================= CONTINUE (AFTER TIMER) ================= -->
-<div id="c" style="display:none;">
+<!-- CONTINUE -->
+<div id="continue" style="display:none;">
 <a href="{BASE_URL}/redirect/{slug}">
 <button class="btn">Continue</button>
 </a>
 </div>
 
-</div> <!-- end card -->
+<div class="disclaimer">
+<strong>DISCLAIMER:</strong><br>
+This webpage is a fictional demonstration designed for testing, UI preview, and educational purposes.
+Any names, images, or profiles shown are not real and do not represent any actual individual.
+</div>
 
+</div>
 </body>
 </html>
 """
-
 # ================= FINAL REDIRECT =================
 @app.get("/redirect/{slug}")
 async def final_redirect(slug: str, db=Depends(get_db)):
