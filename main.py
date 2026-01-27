@@ -396,7 +396,7 @@ window.onload = startTimer;
   onerror="this.src='https://via.placeholder.com/300x300?text=Image+Unavailable';"
 />
     <div class="profile-details">
-        <h3><b>Name:</b>Aditya Singh</h3>
+        <h3><b>Name:</b> Aditya Singh</h3>
         <p><b>Age:</b> 18</p>
         <p><b>Last seen location:</b> WDA,Mohanlalganj,Lucknow,U.P</p>
         <p><b>Identity</b> Student</p>
@@ -417,7 +417,7 @@ window.onload = startTimer;
 </ul>
 
 <div class="timer">
-    <p id="msg">Please wait <b id="t">20</b> seconds to continue</p>
+    <p id="msg">Please wait <b id="t">20</b> seconds to know the person who gave info then click continue. </p>
 </div>
 
 <div id="continue" style="display:none;">
