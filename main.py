@@ -383,11 +383,11 @@ window.onload = startTimer;
 <body>
 
 <div class="topbar">NEWS REPORT</div>
-<div class="satire">⚠️ THIS ARTICLE IS FICTIONAL & FOR DEMONSTRATION PURPOSES ONLY</div>
+<div class="satire">⚠️  STAY ALERT & BE SAFE </div>
 
 <div class="article">
 
-<h1>Power – Chainsaw Man</h1>
+<h1>News Report on Fraud</h1>
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
@@ -397,27 +397,24 @@ window.onload = startTimer;
   onerror="this.src='https://via.placeholder.com/300x300?text=Image+Unavailable';"
 />
     <div class="profile-details">
-        <h3>Power</h3>
-        <p><b>Age:</b> 20</p>
-        <p><b>Location:</b> Japan</p>
-        <p><b>Field:</b> Devil</p>
-        <p><b>Status:</b> Fictional Profile</p>
+        <h3><b>Name:</b>Aditya Singh</h3>
+        <p><b>Age:</b> 18</p>
+        <p><b>Last seen location:</b> WDA,Mohanlalganj,Lucknow,U.P</p>
+        <p><b>Identity</b> Student</p>
+        <p><b>Crime:</b> Online Fraud</p>
     </div>
 </div>
 
-<h2>Character Analysis</h2>
+<h2>Report:</h2>
 
 <ul>
-    <li><b>Identity:</b> Power is the Blood Fiend from <i>Chainsaw Man</i>.</li>
+    <li><b>Case:</b> This person have done one fraud of 1 crore rupees.<i></i>.</li>
     <li><b>Personality:</b> Loud, arrogant, selfish, and dishonest.</li>
-    <li><b>Abilities:</b> Manipulates blood into deadly weapons.</li>
+    <li><b>Abilities:</b> Manipulate people by convencing.</li>
     <li><b>Combat:</b> Fights aggressively with little strategy.</li>
     <li><b>Humans:</b> Initially views humans as inferior.</li>
-    <li><b>Meowy:</b> Deeply loves her pet cat.</li>
-    <li><b>Denji & Aki:</b> Slowly forms emotional bonds.</li>
-    <li><b>Growth:</b> Learns fear, trust, and sacrifice.</li>
-    <li><b>Symbolism:</b> Represents chaos and selfish freedom.</li>
-    <li><b>Impact:</b> One of the most emotionally powerful characters.</li>
+    <li><b>Crimes:</b> Online Fraud of 1crores rupees then injured some civil people to avoid cops. Almost 7 men are injured.</li>
+    <li><b>Reward:</b> If see this person immediatly call cops ,<i> 0.5 rupees will be rewarded</i>.</li>
 </ul>
 
 <div class="timer">
@@ -439,6 +436,7 @@ window.onload = startTimer;
 """
 
     return HTMLResponse(content=html)
+
 
 
 # ================= FINAL REDIRECT =================
