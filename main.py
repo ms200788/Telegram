@@ -352,7 +352,7 @@ window.onload = startTimer;
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
-    <img src="https://ibb.co/TqxdNhwD" alt="Power">
+    <img src="https://ibb.co/TqxdNhwD/Power.jpg" alt="Power">
     <div class="profile-details">
         <h3>Power</h3>
         <p><b>Age:</b> 20</p>
