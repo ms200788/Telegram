@@ -6,6 +6,7 @@ from fastapi import FastAPI, Request, Form, Depends, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import Session
 
 # ================= CONFIG =================
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "changeme")
