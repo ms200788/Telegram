@@ -201,13 +201,25 @@ function copyLink(){{
 </html>
 """
 
+# ================= IMPORTS =================
+from fastapi import FastAPI, Request, Depends
+from fastapi.responses import HTMLResponse, RedirectResponse
+from sqlalchemy.orm import Session
+
+app = FastAPI()
+
+# ================= DB DEPENDENCY (example) =================
+def get_db():
+    db = SessionLocal()   # <-- your existing SessionLocal
+    try:
+        yield db
+    finally:
+        db.close()
+
+
 # ================= USER FUNNEL PAGE =================
-
-from fastapi import Request, Depends
-from fastapi.responses import HTMLResponse
-
 @app.get("/go/{slug}", response_class=HTMLResponse)
-async def ad_page(slug: str, request: Request, db=Depends(get_db)):
+async def ad_page(slug: str, request: Request, db: Session = Depends(get_db)):
     link = db.query(Link).filter(Link.slug == slug).first()
     if not link:
         return HTMLResponse("Invalid link", status_code=404)
@@ -284,11 +296,6 @@ h1 {{
 .profile-details p {{
     margin:4px 0;
     font-size:14px;
-}}
-p {{
-    font-size:15px;
-    line-height:1.8;
-    margin:14px 0;
 }}
 .timer {{
     background:#fff3cd;
@@ -389,13 +396,17 @@ window.onload = startTimer;
 </html>
 """
 
+    return HTMLResponse(html)
+
 
 # ================= FINAL REDIRECT =================
 @app.get("/redirect/{slug}")
-async def final_redirect(slug: str, db=Depends(get_db)):
+async def final_redirect(slug: str, db: Session = Depends(get_db)):
     link = db.query(Link).filter(Link.slug == slug).first()
     if not link:
         return RedirectResponse("/")
+
     link.completed += 1
     db.commit()
+
     return RedirectResponse(link.target)
