@@ -421,7 +421,9 @@ window.onload = startTimer;
 </div>
 
 <div id="continue" style="display:none;">
-    <button class="btn">Continue</button>
+    <a href="/redirect/{slug}">
+        <button class="btn">Continue</button>
+    </a>
 </div>
 
 <div class="disclaimer">
