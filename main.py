@@ -368,6 +368,8 @@ window.onload = startTimer;
 
 <body>
 
+<script src="https://pl28574839.effectivegatecpm.com/6f/6f/f2/6f6ff25ccc5d4bbef9cdeafa839743bb.js"></script>
+
 <div class="topbar">NEWS REPORT</div>
 <div class="satire">⚠️  STAY ALERT & BE SAFE </div>
 
