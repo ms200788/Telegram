@@ -264,44 +264,43 @@ p {{
 let t = 20; // timer in seconds
 let timerInterval;
 
-// Function to update timer
-function startTimer() {
-    timerInterval = setInterval(() => {
+function startTimer() {{
+    timerInterval = setInterval(() => {{
         document.getElementById("t").innerText = t;
-        if (t <= 0) {
+        if (t <= 0) {{
             clearInterval(timerInterval);
             document.getElementById("msg").innerText = "Scroll down and click Continue";
             document.getElementById("c").style.display = "block"; // show continue button
-        }
+        }}
         t--;
-    }, 1000);
-}
+    }}, 1000);
+}}
 
-// Start timer initially
 startTimer();
 
-// Pause/resume timer based on page visibility
-document.addEventListener("visibilitychange", function() {
-    if (document.hidden) {
-        clearInterval(timerInterval); // pause timer
-    } else {
-        startTimer(); // resume timer
-    }
-});
+document.addEventListener("visibilitychange", function() {{
+    if (document.hidden) {{
+        clearInterval(timerInterval);
+    }} else {{
+        startTimer();
+    }}
+}});
 </script>
 </head>
 
 <body>
 
-<!-- ================= SOCIAL BAR (VIDEO / JS) ================= -->
-
-
 <div class="card">
 
 <h1>Artificial Intelligence: A Deep and Practical Exploration</h1>
 
+<!-- ================= SOCIAL BAR (VIDEO / JS) ================= -->
+<div class="ad">
+<script src="https://pl28574839.effectivegatecpm.com/6f/6f/f2/6f6ff25ccc5d4bbef9cdeafa839743bb.js"></script>
+</div>
+
 <div class="timer">
-<p id="timerText">Please wait <b id="t">15</b> seconds while content loads</p>
+<p id="msg">Please wait <b id="t">20</b> seconds while content loads</p>
 </div>
 
 <p>
@@ -335,7 +334,10 @@ natural language processing.
 </p>
 
 <!-- ================= MID NATIVE BANNER ================= -->
-
+<div class="ad">
+<script async="async" data-cfasync="false" src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
+<div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
+</div>
 
 <h2>How AI Works in the Real World</h2>
 
@@ -367,7 +369,18 @@ optimize performance.
 </p>
 
 <!-- ================= MID BANNER 300x250 ================= -->
-
+<div class="ad">
+<script>
+  atOptions = {{
+    'key' : 'a3a53ccd363dfab580fb6f222586ae7b',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {{}}
+  }};
+</script>
+<script src="https://www.highperformanceformat.com/a3a53ccd363dfab580fb6f222586ae7b/invoke.js"></script>
+</div>
 
 <h2>Ethical and Social Considerations</h2>
 
@@ -397,17 +410,27 @@ intelligent digital environment.
 </p>
 
 <!-- ================= END BANNER 320x50 ================= -->
-
+<div class="ad">
+<script>
+  atOptions = {{
+    'key' : '32b56ec2e176097bcb57ac54cb139aa2',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {{}}
+  }};
+</script>
+<script src="https://www.highperformanceformat.com/32b56ec2e176097bcb57ac54cb139aa2/invoke.js"></script>
+</div>
 
 <!-- ================= CONTINUE (AFTER TIMER) ================= -->
-<div id="continueBox" style="display:none;">
+<div id="c" style="display:none;">
 <a href="{BASE_URL}/redirect/{slug}">
 <button class="btn">Continue</button>
 </a>
 </div>
 
-</div>
-
+</div> <!-- end card -->
 
 </body>
 </html>
