@@ -201,21 +201,6 @@ function copyLink(){{
 </html>
 """
 
-# ================= IMPORTS =================
-from fastapi import FastAPI, Request, Depends
-from fastapi.responses import HTMLResponse, RedirectResponse
-from sqlalchemy.orm import Session
-
-app = FastAPI()
-
-# ================= DB DEPENDENCY (example) =================
-def get_db():
-    db = SessionLocal()   # <-- your existing SessionLocal
-    try:
-        yield db
-    finally:
-        db.close()
-
 
 # ================= USER FUNNEL PAGE =================
 @app.get("/go/{slug}", response_class=HTMLResponse)
