@@ -373,7 +373,7 @@ window.onload = startTimer;
 
 <div class="article">
 
-<h1>News Report on Fraud</h1>
+<h1>News Report</h1>
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
@@ -399,7 +399,7 @@ window.onload = startTimer;
     <li><b>Combat:</b> Fights aggressively with little strategy.</li>
     <li><b>Humans:</b> Initially views humans as inferior.</li>
     <li><b>Crimes:</b> Online Fraud of 1crores rupees then injured some civil people to avoid cops. Almost 7 men are injured.</li>
-    <li><b>Reward:</b> If see this person immediatly call cops ,<i> 0.5 rupees will be rewarded</i>.</li>
+    <li><b>Reward:</b> If you see this person immediatly call cops ,<i> 0.5 rupees will be rewarded</i>.</li>
 </ul>
 
 <div class="timer">
@@ -417,6 +417,8 @@ window.onload = startTimer;
 </div>
 
 </div>
+
+<script src="https://pl28576073.effectivegatecpm.com/21/83/07/218307bd8e87e8259e74f98d02f716c1.js"></script>
 
 </body>
 </html>
