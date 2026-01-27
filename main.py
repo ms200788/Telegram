@@ -352,12 +352,12 @@ startTimer();
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
-    <img src="https://via.placeholder.com/300x300.png?text=Profile">
+    <img src="https://ibb.co/TqxdNhwD">
     <div class="profile-details">
-        <h3>Rohan Verma</h3>
-        <p><b>Age:</b> 24</p>
-        <p><b>Location:</b> India</p>
-        <p><b>Field:</b> Computer Science</p>
+        <h3>Power</h3>
+        <p><b>Age:</b> 20</p>
+        <p><b>Location:</b> Japan</p>
+        <p><b>Field:</b> Devil </p>
         <p><b>Status:</b> Fictional Profile</p>
     </div>
 </div>
