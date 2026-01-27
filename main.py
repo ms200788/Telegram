@@ -227,8 +227,6 @@ async def ad_page(slug: str, request: Request, db: Session = Depends(get_db)):
     link.clicks += 1
     db.commit()
 
-    base = str(request.base_url).rstrip("/")
-
     html = f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -238,50 +236,49 @@ async def ad_page(slug: str, request: Request, db: Session = Depends(get_db)):
 <title>Special Report</title>
 
 <style>
-body {
+body {{
     margin: 0;
     background: #e9ecef;
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
-}
+}}
 
-.topbar {
+.topbar {{
     background: #b30000;
     color: #fff;
     padding: 12px 16px;
     font-size: 20px;
     font-weight: 700;
-}
+}}
 
-.satire {
+.satire {{
     background: #000;
     color: #fff;
     text-align: center;
     padding: 8px;
     font-size: 13px;
     font-weight: 600;
-}
+}}
 
-.article {
+.article {{
     max-width: 860px;
     margin: 16px auto;
     background: #fff;
     border-radius: 16px;
     padding: 20px;
-}
+}}
 
-h1 {
+h1 {{
     font-size: 28px;
     margin-bottom: 10px;
-}
+}}
 
-.meta {
+.meta {{
     color: #666;
     font-size: 13px;
     margin-bottom: 16px;
-}
+}}
 
-/* PROFILE */
-.profile {
+.profile {{
     display: flex;
     gap: 18px;
     align-items: center;
@@ -289,46 +286,45 @@ h1 {
     padding: 16px;
     border-radius: 16px;
     margin: 20px 0;
-}
+}}
 
-.profile img {
+.profile img {{
     width: 150px;
     height: 150px;
     border-radius: 16px;
     object-fit: cover;
     border: 3px solid #ccc;
-}
+}}
 
-.profile-details h3 {
+.profile-details h3 {{
     margin: 0 0 6px 0;
     font-size: 20px;
-}
+}}
 
-.profile-details p {
+.profile-details p {{
     margin: 5px 0;
     font-size: 14px;
-}
+}}
 
-/* CONTENT */
-ul {
+ul {{
     padding-left: 18px;
-}
+}}
 
-ul li {
+ul li {{
     font-size: 15px;
     line-height: 1.8;
     margin: 10px 0;
-}
+}}
 
-.timer {
+.timer {{
     background: #fff3cd;
     padding: 14px;
     border-radius: 14px;
     text-align: center;
     margin: 24px 0;
-}
+}}
 
-.btn {
+.btn {{
     width: 100%;
     background: #e63946;
     color: #fff;
@@ -337,49 +333,48 @@ ul li {
     font-size: 17px;
     border-radius: 30px;
     cursor: pointer;
-}
+}}
 
-.btn:hover {
+.btn:hover {{
     opacity: 0.9;
-}
+}}
 
-.disclaimer {
+.disclaimer {{
     background: #111;
     color: #fff;
     padding: 16px;
     font-size: 13px;
     border-radius: 14px;
     margin-top: 30px;
-}
+}}
 
-/* MOBILE */
-@media (max-width: 600px) {
-    .profile {
+@media (max-width: 600px) {{
+    .profile {{
         flex-direction: column;
         text-align: center;
-    }
+    }}
 
-    .profile img {
+    .profile img {{
         width: 130px;
         height: 130px;
-    }
-}
+    }}
+}}
 </style>
 
 <script>
 let t = 20;
 
-function startTimer() {
-    let interval = setInterval(() => {
+function startTimer() {{
+    let interval = setInterval(() => {{
         document.getElementById("t").innerText = t;
-        if (t <= 0) {
+        if (t <= 0) {{
             clearInterval(interval);
             document.getElementById("msg").innerText = "You may now continue";
             document.getElementById("continue").style.display = "block";
-        }
+        }}
         t--;
-    }, 1000);
-}
+    }}, 1000);
+}}
 
 window.onload = startTimer;
 </script>
@@ -396,7 +391,6 @@ window.onload = startTimer;
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
-    <!-- 🔴 IMPORTANT: Replace src with DIRECT i.ibb.co image URL -->
     <img src="https://i.ibb.co/REPLACE-THIS/power.jpg" alt="Power">
     <div class="profile-details">
         <h3>Power</h3>
@@ -440,7 +434,7 @@ window.onload = startTimer;
 </html>
 """
 
-    return HTMLResponse(html)
+    return HTMLResponse(content=html)
 
 
 # ================= FINAL REDIRECT =================
