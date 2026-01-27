@@ -201,7 +201,8 @@ function copyLink(){{
 </html>
 """
 
-# ================= USER FUNNEL PAGE =================
+#-------------User-funnel-page------------
+
 @app.get("/go/{slug}", response_class=HTMLResponse)
 async def ad_page(slug: str, request: Request, db=Depends(get_db)):
     link = db.query(Link).filter(Link.slug == slug).first()
@@ -211,8 +212,7 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
     link.clicks += 1
     db.commit()
 
-    return f"""
-
+    html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,109 +221,87 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
 <title>Special Report | Artificial Intelligence</title>
 
 <style>
-body {
+body {{
     margin:0;
     background:#e9ecef;
     font-family:system-ui, -apple-system, BlinkMacSystemFont;
-}
-
-/* HEADER */
-.topbar {
+}}
+.topbar {{
     background:#b30000;
     color:#fff;
     padding:12px 16px;
     font-size:20px;
     font-weight:700;
-}
-
-/* SATIRE LABEL */
-.satire {
+}}
+.satire {{
     background:#000;
     color:#fff;
     text-align:center;
     padding:8px;
     font-size:13px;
     font-weight:600;
-}
-
-/* MAIN CARD */
-.article {
+}}
+.article {{
     max-width:860px;
     margin:16px auto;
     background:#fff;
     border-radius:16px;
     padding:20px;
-}
-
-/* HEADLINE */
-h1 {
+}}
+h1 {{
     font-size:28px;
     line-height:1.3;
     margin-bottom:10px;
     color:#111;
-}
-
-.meta {
+}}
+.meta {{
     color:#666;
     font-size:13px;
     margin-bottom:16px;
-}
-
-/* PROFILE */
-.profile {
+}}
+.profile {{
     display:flex;
     gap:16px;
     background:#f4f6f8;
     padding:14px;
     border-radius:14px;
     margin:18px 0;
-}
-
-.profile img {
+}}
+.profile img {{
     width:96px;
     height:96px;
     border-radius:12px;
     object-fit:cover;
     border:2px solid #ddd;
-}
-
-.profile-details h3 {
+}}
+.profile-details h3 {{
     margin:0 0 6px 0;
     font-size:18px;
-}
-
-.profile-details p {
+}}
+.profile-details p {{
     margin:4px 0;
     font-size:14px;
     color:#333;
-}
-
-/* ARTICLE TEXT */
-p {
+}}
+p {{
     font-size:15px;
     line-height:1.8;
     color:#222;
     margin:14px 0;
-}
-
-/* ADS */
-.ad {
+}}
+.ad {{
     margin:24px 0;
     text-align:center;
-}
-
-/* TIMER */
-.timer {
+}}
+.timer {{
     background:#fff3cd;
     padding:12px;
     border-radius:12px;
     text-align:center;
     font-size:15px;
     margin:20px 0;
-}
-
-/* CONTINUE */
-.btn {
+}}
+.btn {{
     width:100%;
     background:#e63946;
     color:#fff;
@@ -332,41 +310,34 @@ p {
     font-size:16px;
     border-radius:30px;
     cursor:pointer;
-}
-
-/* DISCLAIMER */
-.disclaimer {
+}}
+.disclaimer {{
     background:#111;
     color:#fff;
     padding:16px;
     font-size:13px;
     border-radius:12px;
     margin-top:30px;
-}
+}}
 </style>
 
 <script>
 let t = 20;
 let interval;
 
-function startTimer() {
-    interval = setInterval(() => {
+function startTimer() {{
+    interval = setInterval(() => {{
         document.getElementById("t").innerText = t;
-        if (t <= 0) {
+        if (t <= 0) {{
             clearInterval(interval);
             document.getElementById("msg").innerText = "You may now continue";
             document.getElementById("continue").style.display = "block";
-        }
+        }}
         t--;
-    }, 1000);
-}
+    }}, 1000);
+}}
 
 startTimer();
-
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) clearInterval(interval);
-    else startTimer();
-});
 </script>
 </head>
 
@@ -378,14 +349,10 @@ document.addEventListener("visibilitychange", () => {
 <div class="article">
 
 <h1>Artificial Intelligence: How Modern Systems Are Reshaping the Digital World</h1>
+<div class="meta">By Editorial Desk | Updated Today</div>
 
-<div class="meta">
-By Editorial Desk | Updated Today
-</div>
-
-<!-- PROFILE -->
 <div class="profile">
-    <img src="https://via.placeholder.com/300x300.png?text=Profile" alt="Profile Photo">
+    <img src="https://via.placeholder.com/300x300.png?text=Profile">
     <div class="profile-details">
         <h3>Rohan Verma</h3>
         <p><b>Age:</b> 24</p>
@@ -395,82 +362,26 @@ By Editorial Desk | Updated Today
     </div>
 </div>
 
-<!-- AD -->
-<div class="ad">
-<script src="https://pl28574839.effectivegatecpm.com/6f/6f/f2/6f6ff25ccc5d4bbef9cdeafa839743bb.js"></script>
-</div>
-
 <div class="timer">
 <p id="msg">Please wait <b id="t">20</b> seconds to continue reading</p>
 </div>
 
-<p>
-Artificial Intelligence has rapidly evolved from a theoretical concept into a core pillar of modern
-technology. Today, AI systems are embedded in smartphones, recommendation engines, navigation systems,
-and enterprise tools used by millions of people daily.
-</p>
-
-<p>
-Experts suggest that AI’s ability to learn from data, recognize patterns, and automate decision-making
-has transformed industries such as healthcare, finance, education, and cybersecurity.
-</p>
-
-<h2>How AI Systems Operate</h2>
-
-<p>
-Modern AI relies on machine learning and neural networks trained on massive datasets. These systems do
-not follow rigid instructions; instead, they adapt based on outcomes and feedback.
-</p>
-
-<!-- MID AD -->
-<div class="ad">
-<script async data-cfasync="false" src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
-<div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
-</div>
-
-<p>
-As AI adoption increases, discussions around ethical use, transparency, and accountability have become
-central to global policy debates.
-</p>
-
-<h2>Looking Ahead</h2>
-
-<p>
-Industry analysts believe AI will continue to redefine how humans interact with technology. Responsible
-innovation and informed usage will be key to ensuring its benefits are shared broadly.
-</p>
-
-<!-- END AD -->
-<div class="ad">
-<script>
-  atOptions = {
-    'key' : '32b56ec2e176097bcb57ac54cb139aa2',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/32b56ec2e176097bcb57ac54cb139aa2/invoke.js"></script>
-</div>
-
-<!-- CONTINUE -->
 <div id="continue" style="display:none;">
-<a href="{BASE_URL}/redirect/{slug}">
+<a href="{base}/redirect/{slug}">
 <button class="btn">Continue</button>
 </a>
 </div>
 
 <div class="disclaimer">
 <strong>DISCLAIMER:</strong><br>
-This webpage is a fictional demonstration designed for testing, UI preview, and educational purposes.
-Any names, images, or profiles shown are not real and do not represent any actual individual.
+This page is fictional and for testing only.
 </div>
 
 </div>
 </body>
 </html>
 """
+
 # ================= FINAL REDIRECT =================
 @app.get("/redirect/{slug}")
 async def final_redirect(slug: str, db=Depends(get_db)):
