@@ -212,6 +212,7 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
     db.commit()
 
     return f"""
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
