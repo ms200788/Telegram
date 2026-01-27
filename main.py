@@ -238,105 +238,149 @@ async def ad_page(slug: str, request: Request, db: Session = Depends(get_db)):
 <title>Special Report</title>
 
 <style>
-body {{
-    margin:0;
-    background:#e9ecef;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont;
-}}
-.topbar {{
-    background:#b30000;
-    color:#fff;
-    padding:12px 16px;
-    font-size:20px;
-    font-weight:700;
-}}
-.satire {{
-    background:#000;
-    color:#fff;
-    text-align:center;
-    padding:8px;
-    font-size:13px;
-    font-weight:600;
-}}
-.article {{
-    max-width:860px;
-    margin:16px auto;
-    background:#fff;
-    border-radius:16px;
-    padding:20px;
-}}
-h1 {{
-    font-size:28px;
-    margin-bottom:10px;
-}}
-.meta {{
-    color:#666;
-    font-size:13px;
-    margin-bottom:16px;
-}}
-.profile {{
-    display:flex;
-    gap:16px;
-    background:#f4f6f8;
-    padding:14px;
-    border-radius:14px;
-    margin:18px 0;
-}}
-.profile img {{
-    width:96px;
-    height:96px;
-    border-radius:12px;
-    object-fit:cover;
-    border:2px solid #ddd;
-}}
-.profile-details h3 {{
-    margin:0 0 6px 0;
-    font-size:18px;
-}}
-.profile-details p {{
-    margin:4px 0;
-    font-size:14px;
-}}
-.timer {{
-    background:#fff3cd;
-    padding:12px;
-    border-radius:12px;
-    text-align:center;
-    margin:20px 0;
-}}
-.btn {{
-    width:100%;
-    background:#e63946;
-    color:#fff;
-    border:none;
-    padding:14px;
-    font-size:16px;
-    border-radius:30px;
-    cursor:pointer;
-}}
-.disclaimer {{
-    background:#111;
-    color:#fff;
-    padding:16px;
-    font-size:13px;
-    border-radius:12px;
-    margin-top:30px;
-}}
+body {
+    margin: 0;
+    background: #e9ecef;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.topbar {
+    background: #b30000;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.satire {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.article {
+    max-width: 860px;
+    margin: 16px auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.meta {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    background: #f4f6f8;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 20px 0;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 3px solid #ccc;
+}
+
+.profile-details h3 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* CONTENT */
+ul {
+    padding-left: 18px;
+}
+
+ul li {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.timer {
+    background: #fff3cd;
+    padding: 14px;
+    border-radius: 14px;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.btn {
+    width: 100%;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.disclaimer {
+    background: #111;
+    color: #fff;
+    padding: 16px;
+    font-size: 13px;
+    border-radius: 14px;
+    margin-top: 30px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 130px;
+        height: 130px;
+    }
+}
 </style>
 
 <script>
 let t = 20;
-function startTimer() {{
-    let interval = setInterval(() => {{
+
+function startTimer() {
+    let interval = setInterval(() => {
         document.getElementById("t").innerText = t;
-        if (t <= 0) {{
+        if (t <= 0) {
             clearInterval(interval);
             document.getElementById("msg").innerText = "You may now continue";
             document.getElementById("continue").style.display = "block";
-        }}
+        }
         t--;
-    }}, 1000);
-}}
+    }, 1000);
+}
+
 window.onload = startTimer;
 </script>
 </head>
@@ -348,11 +392,12 @@ window.onload = startTimer;
 
 <div class="article">
 
-<h1>Power - Chainsaw Man</h1>
+<h1>Power – Chainsaw Man</h1>
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
-    <img src="https://ibb.co/TqxdNhwD/Power.jpg" alt="Power">
+    <!-- 🔴 IMPORTANT: Replace src with DIRECT i.ibb.co image URL -->
+    <img src="https://i.ibb.co/REPLACE-THIS/power.jpg" alt="Power">
     <div class="profile-details">
         <h3>Power</h3>
         <p><b>Age:</b> 20</p>
@@ -367,7 +412,7 @@ window.onload = startTimer;
 <ul>
     <li><b>Identity:</b> Power is the Blood Fiend from <i>Chainsaw Man</i>.</li>
     <li><b>Personality:</b> Loud, arrogant, selfish, and dishonest.</li>
-    <li><b>Abilities:</b> Can manipulate blood into weapons.</li>
+    <li><b>Abilities:</b> Manipulates blood into deadly weapons.</li>
     <li><b>Combat:</b> Fights aggressively with little strategy.</li>
     <li><b>Humans:</b> Initially views humans as inferior.</li>
     <li><b>Meowy:</b> Deeply loves her pet cat.</li>
@@ -378,20 +423,19 @@ window.onload = startTimer;
 </ul>
 
 <div class="timer">
-<p id="msg">Please wait <b id="t">20</b> seconds to continue</p>
+    <p id="msg">Please wait <b id="t">20</b> seconds to continue</p>
 </div>
 
 <div id="continue" style="display:none;">
-<a href="{base}/redirect/{slug}">
-<button class="btn">Continue</button>
-</a>
+    <button class="btn">Continue</button>
 </div>
 
 <div class="disclaimer">
-<b>DISCLAIMER:</b> This page is fictional and for testing purposes only.
+    <b>DISCLAIMER:</b> This page is fictional and for testing purposes only.
 </div>
 
 </div>
+
 </body>
 </html>
 """
