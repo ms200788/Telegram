@@ -402,6 +402,13 @@ window.onload = startTimer;
     <li><b>Reward:</b> If you see this person immediatly call cops ,<i> 0.5 rupees will be rewarded</i>.</li>
 </ul>
 
+<div class="ad">
+<script async="async" data-cfasync="false"
+src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
+<div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
+</div>
+
+
 <div class="timer">
     <p id="msg">Please wait <b id="t">20</b> seconds to know the person who gave info then click continue. </p>
 </div>
