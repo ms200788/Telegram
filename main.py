@@ -218,7 +218,7 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Special Report | Artificial Intelligence</title>
+<title>Special Report</title>
 
 <style>
 body {{
@@ -348,7 +348,7 @@ startTimer();
 
 <div class="article">
 
-<h1>Artificial Intelligence: How Modern Systems Are Reshaping the Digital World</h1>
+<h1>Power - Chainsaw Man</h1>
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
@@ -360,7 +360,72 @@ startTimer();
         <p><b>Field:</b> Devil </p>
         <p><b>Status:</b> Fictional Profile</p>
     </div>
-</div>
+
+
+<h2>Character Analysis: Power from Chainsaw Man</h2>
+
+<ul>
+    <li>
+        <strong>Identity and Origin:</strong> Power is the Blood Fiend in the anime and manga series <em>Chainsaw Man</em>. 
+        As a fiend, she is a devil that has taken over a human corpse, which gives her a humanoid appearance 
+        while retaining her devil powers. Her horns and sharp teeth visually represent her non-human nature.
+    </li>
+
+    <li>
+        <strong>Personality Traits:</strong> Power is loud, arrogant, selfish, and extremely dishonest. 
+        She lies casually and often exaggerates her achievements to make herself look superior. 
+        Her pride is unmatched, and she frequently claims to have high intelligence and strength, 
+        even when proven otherwise.
+    </li>
+
+    <li>
+        <strong>Blood Devil Abilities:</strong> Power has the unique ability to manipulate blood, 
+        both her own and others’. She can solidify blood into deadly weapons such as spears, knives, 
+        and massive hammers. These abilities make her a powerful fighter, especially in close combat.
+    </li>
+
+    <li>
+        <strong>Combat Style:</strong> Unlike trained devil hunters, Power fights in a wild and reckless manner. 
+        She relies on raw aggression rather than strategy, often charging headfirst into danger. 
+        This makes her unpredictable but also vulnerable when facing intelligent enemies.
+    </li>
+
+    <li>
+        <strong>Relationship with Humans:</strong> Power openly dislikes humans and considers them inferior. 
+        At the beginning of the series, she only cooperates with humans for her own benefit. 
+        She has no moral issue with sacrificing others if it means saving herself.
+    </li>
+
+    <li>
+        <strong>Bond with Meowy:</strong> Despite her cruel personality, Power deeply loves her pet cat, Meowy. 
+        Her affection for Meowy reveals her emotional depth and proves that she is capable of genuine care. 
+        This bond plays a major role in humanizing her character.
+    </li>
+
+    <li>
+        <strong>Friendship with Denji and Aki:</strong> Over time, Power develops a strong bond with Denji and Aki. 
+        Living together helps her slowly understand trust, companionship, and loyalty. 
+        Although she rarely admits it, she comes to rely on them emotionally.
+    </li>
+
+    <li>
+        <strong>Character Development:</strong> Power starts as a purely selfish fiend but gradually evolves. 
+        Through traumatic experiences and shared struggles, she learns fear, empathy, and sacrifice. 
+        This growth makes her one of the most emotionally impactful characters in the series.
+    </li>
+
+    <li>
+        <strong>Symbolism:</strong> Power represents chaos, selfish freedom, and raw instinct. 
+        Unlike traditional heroes, she does not follow moral rules, which makes her character feel realistic 
+        and refreshing in the dark world of <em>Chainsaw Man</em>.
+    </li>
+
+    <li>
+        <strong>Overall Impact:</strong> Power’s unpredictable behavior, emotional growth, and tragic moments 
+        leave a lasting impression on the audience. She is not just comic relief, but a deeply written character 
+        who highlights the thin line between devils and humans.
+    </li>
+</ul>
 
 <div class="timer">
 <p id="msg">Please wait <b id="t">20</b> seconds to continue reading</p>
