@@ -391,7 +391,11 @@ window.onload = startTimer;
 <div class="meta">By Editorial Desk | Updated Today</div>
 
 <div class="profile">
-    <img src="https://i.ibb.co/REPLACE-THIS/power.jpg" alt="Power">
+    <img 
+  src="https://i.ibb.co/rfRNXyQK/IMG-20260125-233015-389.jpg"
+  alt="Power"
+  onerror="this.src='https://via.placeholder.com/300x300?text=Image+Unavailable';"
+/>
     <div class="profile-details">
         <h3>Power</h3>
         <p><b>Age:</b> 20</p>
