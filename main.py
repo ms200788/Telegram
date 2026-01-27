@@ -294,7 +294,7 @@ document.addEventListener("visibilitychange", function() {
 <body>
 
 <!-- ================= SOCIAL BAR (VIDEO / JS) ================= -->
-<script src="https://pl28574839.effectivegatecpm.com/6f/6f/f2/6f6ff25ccc5d4bbef9cdeafa839743bb.js"></script>
+
 
 <div class="card">
 
@@ -335,11 +335,7 @@ natural language processing.
 </p>
 
 <!-- ================= MID NATIVE BANNER ================= -->
-<div class="ad">
-<script async="async" data-cfasync="false"
-src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
-<div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
-</div>
+
 
 <h2>How AI Works in the Real World</h2>
 
@@ -371,18 +367,7 @@ optimize performance.
 </p>
 
 <!-- ================= MID BANNER 300x250 ================= -->
-<div class="ad">
-<script>
-atOptions = {{
-  'key' : 'a3a53ccd363dfab580fb6f222586ae7b',
-  'format' : 'iframe',
-  'height' : 250,
-  'width' : 300,
-  'params' : {{}}
-}};
-</script>
-<script src="https://www.highperformanceformat.com/a3a53ccd363dfab580fb6f222586ae7b/invoke.js"></script>
-</div>
+
 
 <h2>Ethical and Social Considerations</h2>
 
@@ -412,18 +397,7 @@ intelligent digital environment.
 </p>
 
 <!-- ================= END BANNER 320x50 ================= -->
-<div class="ad">
-<script>
-atOptions = {{
-  'key' : '32b56ec2e176097bcb57ac54cb139aa2',
-  'format' : 'iframe',
-  'height' : 50,
-  'width' : 320,
-  'params' : {{}}
-}};
-</script>
-<script src="https://www.highperformanceformat.com/32b56ec2e176097bcb57ac54cb139aa2/invoke.js"></script>
-</div>
+
 
 <!-- ================= CONTINUE (AFTER TIMER) ================= -->
 <div id="continueBox" style="display:none;">
@@ -434,7 +408,6 @@ atOptions = {{
 
 </div>
 
-<script src="https://pl28576073.effectivegatecpm.com/21/83/07/218307bd8e87e8259e74f98d02f716c1.js"></script>
 
 </body>
 </html>
