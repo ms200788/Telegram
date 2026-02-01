@@ -229,11 +229,21 @@ body {{
 }}
 
 .topbar {{
-    background: #b30000;
-    color: #fff;
-    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-image: url("https://example.com/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    padding: 14px 16px;
     font-size: 20px;
     font-weight: 700;
+
+    backdrop-filter: blur(2px);
 }}
 
 .satire {{
