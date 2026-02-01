@@ -233,7 +233,7 @@ body {{
     top: 0;
     z-index: 1000;
 
-    background-image: url("https://example.com/header.jpg");
+    background-image: url("https://i.ibb.co/4nxVTXW5/IMG-20251222-205203.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
